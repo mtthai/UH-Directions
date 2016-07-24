@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+}
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+  box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+}
+#right-panel {
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+  float: right;
+  height: 100%;
+  width: 300px;
+  overflow: auto;
+}
+@media print {
+  #map {
+  height: 500px;
+  margin: 0;
+  }
+  #right-panel {
+  float: none;
+  width: auto;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+    #right-panel{
+        display: none !important;
+    }
+}
