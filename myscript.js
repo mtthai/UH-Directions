@@ -31,7 +31,7 @@ function initMap() {
   document.getElementById('transport').addEventListener('change', onChangeHandler);
   
   var ctaLayer = new google.maps.KmlLayer({
-          url: 'https://github.com/mtthai/UH-Directions/raw/gh-pages/U%20of%20H%20parking%20lot%20and%20traffic%20status.kmz',
+          url: 'https://www.dropbox.com/s/jbjk0sh3wmov01v/U%20of%20H%20parking%20lot%20and%20traffic%20status.kmz?dl=1',
           map: map
   });
 }
