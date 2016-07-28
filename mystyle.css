@@ -8,15 +8,11 @@ html, body {
 }
 #floating-panel {
   position: absolute;
-  top: 10px;
-  left: 25%;
-  z-index: 5;
   background-color: #fff;
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #999;
-  text-align: center;
   font-family: 'Roboto','sans-serif';
-  line-height: 30px;
+  font-size: 130%;
   padding-left: 10px;
   box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
 }
@@ -28,6 +24,11 @@ html, body {
   height: 100%;
   width: 300px;
   overflow: auto;
+}
+.btn {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
 }
 @media print {
   #map {

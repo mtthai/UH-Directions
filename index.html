@@ -4,22 +4,30 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <link rel="shortcut icon" href="favicon-32x32.png">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
     <script src="myscript.js"></script>
     <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
     <title>U.H Directions</title>
   </head>
     <script>
         $(document).ready(function() {
             $('#start option').clone().appendTo('#end');
+            $('#end').find('.default-start').html('End');
+            $('#end').find('.myLocation').remove();
         });
+        
         getCurrentLocation();
+        
     </script>
   <body>
     <div id="floating-panel">
-      <strong>Start:</strong>
-      <select id="start">
-        <option class = "myLocation" value="">Current Location</option>
+      
+      <select class="browser-default" id="start">
+        <option class="default-start" value="" disabled selected>Start</option>
+        <option class="myLocation" value="">Current Location</option>
         <option value="29.722161, -95.350015">TDECU Stadium</option>
         <option value="29.722597, -95.344294">Agnes Arnold Hall</option>
         <option value="4400 University Dr, Houston, TX 77204">Welcome Center</option>
@@ -28,23 +36,23 @@
         <option value="29.720325, -95.343496">Cullen Performance Hall</option>
         <option value="29.721019, -95.339757">C.T. Bauer College of Business</option>
         <option value="4811 Calhoun Rd Houston,TX">Health and Biomedical Sciences Center</option>
-        <option value="16E Houston,TX 77004">Economy LOT16E</option>
+        <option value="29.727627, -95.344398">Economy LOT16E</option>
         <option value="2902 Cullen Blvd">Economy LOT16J</option>
-        <option value="4A Houston, TX 77004">Economy LOT4A</option>
-        <option value="16D Houston,TX 77004">Student LOT16D</option>
+        <option value="29.717363, -95.343173">Economy LOT4A</option>
+        <option value="29.727232, -95.342540">Student LOT16D</option>
       </select>
       <br>
-      <strong>End:</strong>
-      <select id="end"></select>
+      
+      <select class="browser-default" id="end"></select>
        <br>
-      <select id="transport">
-          <option value="walking">Walking</option>
+      <select class="browser-default" id="transport">
           <option value="driving">Driving</option>
+          <option value="walking">Walking</option>
       </select>
     </div>
     <div id="right-panel" style="display: none;"></div>
     <div id="map"></div>
-
+      <button class="btn waves-effect waves-light red" onClick="myFunction()" type="submit">Maps App<i class="material-icons right">send</i></button>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD99t7VnYrQJu3-SkbWYoFTlt6_U_4KR9Y&callback=initMap">
     </script>
   </body>
