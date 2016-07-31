@@ -14,32 +14,37 @@
   </head>
     <script>
         $(document).ready(function() {
-            $('#start option').clone().appendTo('#end');
+            $('#end').html($('#start').html());
             $('#end').find('.default-start').html('End');
             $('#end').find('.myLocation').remove();
+            
+            getCurrentLocation();
         });
-        
-        getCurrentLocation();
-        
+             
     </script>
   <body>
     <div id="floating-panel">
       
       <select class="browser-default" id="start">
+        
         <option class="default-start" value="" disabled selected>Start</option>
         <option class="myLocation" value="">Current Location</option>
-        <option value="29.722161, -95.350015">TDECU Stadium</option>
-        <option value="29.722597, -95.344294">Agnes Arnold Hall</option>
-        <option value="4400 University Dr, Houston, TX 77204">Welcome Center</option>
-        <option value="University of Houston-Campus Recreation & Wellness Center">Campus Recreation & Wellness Center</option>
-        <option value="29.721131, -95.342290">M.D Anderson Library</option>
-        <option value="29.720325, -95.343496">Cullen Performance Hall</option>
-        <option value="29.721019, -95.339757">C.T. Bauer College of Business</option>
+        <optgroup label="Buildings">
+            <option value="29.722161, -95.350015">TDECU Stadium</option>
+            <option value="29.722597, -95.344294">Agnes Arnold Hall</option>
+            <option value="4400 University Dr, Houston, TX 77204">Welcome Center</option>
+            <option value="University of Houston-Campus Recreation & Wellness Center">Campus Recreation & Wellness Center</option>
+            <option value="29.721131, -95.342290">M.D Anderson Library</option>
+            <option value="29.720325, -95.343496">Cullen Performance Hall</option>
+            <option value="29.721019, -95.339757">C.T. Bauer College of Business</option>
         <option value="4811 Calhoun Rd Houston,TX">Health and Biomedical Sciences Center</option>
-        <option value="29.727627, -95.344398">Economy LOT16E</option>
-        <option value="2902 Cullen Blvd">Economy LOT16J</option>
-        <option value="29.717363, -95.343173">Economy LOT4A</option>
-        <option value="29.727232, -95.342540">Student LOT16D</option>
+        </optgroup>
+        <optgroup label="Parking Lots">
+            <option value="29.727627, -95.344398">Economy LOT16E</option>
+            <option value="2902 Cullen Blvd">Economy LOT16J</option>
+            <option value="29.717363, -95.343173">Economy LOT4A</option>
+            <option value="29.727232, -95.342540">Student LOT16D</option>
+        </optgroup>
       </select>
       <br>
       

@@ -7,7 +7,6 @@ html, body {
   height: 100%;
 }
 #floating-panel {
-  position: absolute;
   background-color: #fff;
   padding: 10px;
   border: 1px solid #999;
@@ -51,5 +50,6 @@ html, body {
         -moz-transform:scale(0.8);
         -ms-transform:scale(0.8);
         transform:scale(0.8);
+        right: 70%;
     }
 }
